@@ -1,26 +1,22 @@
 import Page from '../components/Page'
-import { Signup } from '../components/Signup'
-import { Feed } from '../components/Feed'
-import { Box } from '../components/atoms/Box'
-import { Heading } from '../components/atoms/Heading'
+import { Flex, Box, Text, Heading } from '../components'
 
 export default () => (
   <Page title="Home">
-    <Heading>Heading</Heading>
-    <Heading as="h3" color="red">
-      Subheading
-    </Heading>
-    <Box
+    <Flex
       as="section"
-      color="primary" // Derived from theme.tsx
-      width={[
-        1, // 100% below the smallest breakpoint (all viewports)
-        1 / 2, // 50% from the next breakpoint and up
-        1 / 4 // 25% from the next breakpoint and up
-      ]}
+      alignItems="center"
+      justifyContent="center"
+      height="100vh"
     >
-      <Signup />
-      <Feed />
-    </Box>
+      <Box as="main" width={2 / 3} textAlign="center">
+        <Heading>Flexible, scalable, themeable.</Heading>
+        <Heading as="h3">Spruce React UI Framework</Heading>
+        <Text>
+          A fully customisable design system build with functional CSS and
+          atomic design principles.
+        </Text>
+      </Box>
+    </Flex>
   </Page>
 )

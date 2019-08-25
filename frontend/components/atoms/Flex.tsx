@@ -6,15 +6,16 @@ import {
   LayoutProps,
   color,
   ColorProps,
-  flex,
-  FlexProps
+  flexbox,
+  FlexboxProps
 } from 'styled-system'
 
-type FlexBoxProps = SpaceProps & LayoutProps & ColorProps & FlexProps
+type FlexProps = SpaceProps & LayoutProps & ColorProps & FlexboxProps
 
-export const Flex = styled.div<FlexBoxProps>`
+export const Flex = styled.div<FlexProps>`
+  display: flex;
   ${space}
   ${layout}
   ${color}
-  ${flex}
+  ${flexbox}
 `

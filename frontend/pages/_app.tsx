@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from '../lib/theme'
 import { reset } from '../lib/reset'
+import { typography } from '../lib/typography'
 
 type GlobalProps = {
   lightTheme?: boolean
@@ -15,8 +16,8 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
   body {
     color: ${props => (props.lightTheme ? 'black' : 'white')};
     background-color: ${props => (props.lightTheme ? 'white' : 'black')};
-    font-family: ${theme.fonts.primaryFont};
   }
+  ${typography}
 `
 
 class MyApp extends React.Component<IApolloProps & AppProps> {

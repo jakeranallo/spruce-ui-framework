@@ -1,26 +1,6 @@
 import Page from '../components/Page'
 import { Flex, Box, Text, Heading, Button } from '../components'
-
-const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.3
-    }
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: 'afterChildren'
-    }
-  }
-}
-
-const item = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: 100 }
-}
+import { list, item } from '../helpers/withStagger'
 
 export default () => (
   <Page title="Home">

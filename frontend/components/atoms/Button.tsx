@@ -24,6 +24,7 @@ export const Button = styled(motion.button)<ButtonProps>`
 `
 Button.defaultProps = {
   m: 2,
+  width: [1, 1 / 2, 'auto'],
   whileHover: { scale: 1.2 },
   whileTap: { scale: 0.9 }
 }

@@ -15,3 +15,6 @@ export const Heading = styled.h1<HeadingProps>`
   ${typography}
   ${color}
 `
+Heading.defaultProps = {
+  mb: 3
+}

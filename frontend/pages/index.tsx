@@ -2,6 +2,27 @@ import Page from '../components/Page'
 import { Flex, Box, Text, Heading } from '../components'
 import { Button } from '../components/atoms/Button'
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.3
+    }
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren'
+    }
+  }
+}
+
+const item = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 100 }
+}
+
 export default () => (
   <Page title="Home">
     <Flex
@@ -17,8 +38,14 @@ export default () => (
           A fully customisable design system build with functional CSS and
           atomic design principles.
         </Text>
-        <Button variant="primary">View on Github</Button>
-        <Button variant="secondary">Contact Us</Button>
+        <Box initial="hidden" animate="visible" variants={list}>
+          <Button variant="primary" variants={item}>
+            View on Github
+          </Button>
+          <Button variant="secondary" variants={item}>
+            Contact Us
+          </Button>
+        </Box>
       </Box>
     </Flex>
   </Page>

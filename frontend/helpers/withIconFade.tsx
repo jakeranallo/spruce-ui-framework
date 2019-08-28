@@ -1,4 +1,4 @@
-export const icon = {
+export const iconFade = {
   hidden: {
     opacity: 0,
     pathLength: 0,

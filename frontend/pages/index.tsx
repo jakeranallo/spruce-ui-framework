@@ -1,7 +1,8 @@
 import Page from '../components/Page'
-import { Flex, Box, Text, Heading, Button, Icon, Logo } from '../components'
+import { Flex, Box, Text, Heading, Button, Icon, Path } from '../components'
 import { list, item } from '../helpers/withStagger'
-import { icon } from '../helpers/withIconFade'
+import { iconFade } from '../helpers/withIconFade'
+import { icons } from '../global/paths'
 
 export default () => (
   <Page title="Home">
@@ -12,9 +13,10 @@ export default () => (
       height="100vh"
     >
       <Box as="main" width={2 / 3} textAlign="center">
-        <Icon width="20%" color="red" mb={6}>
-          <Logo
-            variants={icon}
+        <Icon width="200px" color="primary" mb={6}>
+          <Path
+            d={icons.logo}
+            variants={iconFade}
             initial="hidden"
             animate="visible"
             transition={{
@@ -31,10 +33,10 @@ export default () => (
         </Text>
         <Box initial="hidden" animate="visible" variants={list}>
           <Button variant="primary" variants={item}>
-            View on Github
+            <Text>View on Github</Text>
           </Button>
           <Button variant="secondary" variants={item}>
-            Contact Us
+            <Text>Contact Us</Text>
           </Button>
         </Box>
       </Box>

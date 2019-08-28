@@ -135,6 +135,10 @@ export const reset = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  button {
+    outline: none;
+    cursor: pointer;
+  }
 `
 
 export const Reset = createGlobalStyle`${reset}`

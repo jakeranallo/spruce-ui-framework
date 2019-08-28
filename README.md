@@ -1,3 +1,5 @@
-# TypeScript React/Node with Apollo, GraphQL and Prisma (PostgresQL)
+# TypeScript React UI Framework
 
-A full-stack boilerplate project.
+Built with styled-components, styled-system and framer-motion
+
+## Development

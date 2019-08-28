@@ -1,4 +1,4 @@
-import theme from './theme'
+import { theme } from './theme'
 import { css, createGlobalStyle } from 'styled-components'
 
 export const typography = css`

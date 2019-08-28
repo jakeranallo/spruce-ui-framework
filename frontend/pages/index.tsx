@@ -1,6 +1,5 @@
 import Page from '../components/Page'
-import { Flex, Box, Text, Heading } from '../components'
-import { Button } from '../components/atoms/Button'
+import { Flex, Box, Text, Heading, Button } from '../components'
 
 const list = {
   visible: {

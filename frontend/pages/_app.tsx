@@ -3,9 +3,7 @@ import * as React from 'react'
 import withApolloClient, { IApolloProps } from '../lib/with-apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import theme from '../lib/theme'
-import { reset } from '../lib/reset'
-import { typography } from '../lib/typography'
+import { reset, typography, theme } from '../global'
 
 type GlobalProps = {
   lightTheme?: boolean

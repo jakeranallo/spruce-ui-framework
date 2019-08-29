@@ -1,5 +1,14 @@
 import Page from '../components/Page'
-import { Flex, Box, Text, Heading, Button, Icon, Path } from '../components'
+import {
+  Flex,
+  Box,
+  Text,
+  Heading,
+  Button,
+  Icon,
+  Input,
+  Path
+} from '../components'
 import {
   staggerList,
   staggerItem,
@@ -31,6 +40,9 @@ export default () => (
           A fully customisable design system build with functional CSS and
           atomic design principles.
         </Text>
+        <Box as="form">
+          <Input placeholder="Email address..." />
+        </Box>
         <Box variants={staggerList}>
           <Button variant="primary" variants={staggerItem}>
             <Text>View on Github</Text>

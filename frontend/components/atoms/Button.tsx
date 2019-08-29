@@ -11,7 +11,10 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type ButtonProps = SpaceProps & LayoutProps & ColorProps & ButtonStyleProps
+export type ButtonProps = SpaceProps &
+  LayoutProps &
+  ColorProps &
+  ButtonStyleProps
 
 export const Button = styled(motion.button)<ButtonProps>`
   ${space}

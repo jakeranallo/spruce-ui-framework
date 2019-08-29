@@ -10,7 +10,7 @@ import {
   GridProps
 } from 'styled-system'
 
-type GridBoxProps = SpaceProps & LayoutProps & ColorProps & GridProps
+export type GridBoxProps = SpaceProps & LayoutProps & ColorProps & GridProps
 
 export const Grid = styled.div<GridBoxProps>`
   ${space}

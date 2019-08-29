@@ -9,7 +9,7 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type IconProps = SpaceProps & LayoutProps & ColorProps
+export type IconProps = SpaceProps & LayoutProps & ColorProps
 
 export const Icon = styled(motion.svg)<IconProps>`
   ${space}

@@ -13,7 +13,7 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type BoxProps = SpaceProps &
+export type BoxProps = SpaceProps &
   LayoutProps &
   ColorProps &
   TypographyProps &

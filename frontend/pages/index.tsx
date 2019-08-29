@@ -43,6 +43,7 @@ export default () => (
         </Text>
         <Box as="form">
           <IconInput
+            placeholder="text"
             before={
               <Icon width="24px" color="primary" mb={4} viewBox="0 0 180 81">
                 <Path

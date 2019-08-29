@@ -9,7 +9,7 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type TextProps = SpaceProps & TypographyProps & ColorProps
+export type TextProps = SpaceProps & TypographyProps & ColorProps
 
 export const Text = styled(motion.p)<TextProps>`
   ${space}

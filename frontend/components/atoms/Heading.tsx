@@ -9,7 +9,7 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type HeadingProps = SpaceProps & TypographyProps & ColorProps
+export type HeadingProps = SpaceProps & TypographyProps & ColorProps
 
 export const Heading = styled(motion.h1)<HeadingProps>`
   ${space}

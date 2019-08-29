@@ -9,7 +9,7 @@ import {
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type ImageProps = SpaceProps & LayoutProps & BorderProps
+export type ImageProps = SpaceProps & LayoutProps & BorderProps
 
 export const Image = styled(motion.image)<ImageProps>`
   ${space}

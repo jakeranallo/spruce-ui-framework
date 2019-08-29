@@ -7,11 +7,16 @@ import {
   color,
   ColorProps
 } from 'styled-system'
+import { motion } from 'framer-motion'
 
 type TextProps = SpaceProps & TypographyProps & ColorProps
 
-export const Text = styled.p<TextProps>`
+export const Text = styled(motion.p)<TextProps>`
   ${space}
   ${typography}
   ${color}
 `
+Text.defaultProps = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 }
+}

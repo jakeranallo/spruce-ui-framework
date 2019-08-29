@@ -1,7 +1,11 @@
 import Page from '../components/Page'
 import { Flex, Box, Text, Heading, Button, Icon, Path } from '../components'
-import { list, item } from '../helpers/withStagger'
-import { iconFade } from '../helpers/withIconFade'
+import {
+  staggerList,
+  staggerItem,
+  iconFade,
+  iconTransition
+} from '../animation'
 import { icons } from '../global/paths'
 import { motion } from 'framer-motion'
 
@@ -20,10 +24,7 @@ export default () => (
             variants={iconFade}
             initial="hidden"
             animate="visible"
-            transition={{
-              default: { duration: 2, ease: 'easeInOut' },
-              fillOpacity: { duration: 2, ease: [1, 0, 0.8, 1] }
-            }}
+            transition={iconTransition}
           />
         </Icon>
         <Heading>Flexible, scalable, themeable.</Heading>
@@ -32,11 +33,11 @@ export default () => (
           A fully customisable design system build with functional CSS and
           atomic design principles.
         </Text>
-        <Box initial="hidden" animate="visible" variants={list}>
-          <Button variant="primary" variants={item}>
+        <Box initial="hidden" animate="visible" variants={staggerList}>
+          <Button variant="primary" variants={staggerItem}>
             <Text>View on Github</Text>
           </Button>
-          <Button variant="secondary" variants={item}>
+          <Button variant="secondary" variants={staggerItem}>
             <Text>Contact Us</Text>
           </Button>
         </Box>

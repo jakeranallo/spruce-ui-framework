@@ -1,4 +1,4 @@
-export const list = {
+export const staggerList = {
   visible: {
     opacity: 1,
     transition: {
@@ -14,7 +14,7 @@ export const list = {
   }
 }
 
-export const item = {
+export const staggerItem = {
   visible: { opacity: 1, y: 0 },
   hidden: { opacity: 0, y: 100 }
 }

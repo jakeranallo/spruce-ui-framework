@@ -3,6 +3,7 @@ import { Flex, Box, Text, Heading, Button, Icon, Path } from '../components'
 import { list, item } from '../helpers/withStagger'
 import { iconFade } from '../helpers/withIconFade'
 import { icons } from '../global/paths'
+import { motion } from 'framer-motion'
 
 export default () => (
   <Page title="Home">
@@ -13,7 +14,7 @@ export default () => (
       height="100vh"
     >
       <Box as="main" width={2 / 3} textAlign="center">
-        <Icon width="200px" color="primary" mb={6}>
+        <Icon width={2 / 4} color="primary" mb={4} viewBox="0 0 180 81">
           <Path
             d={icons.logo}
             variants={iconFade}
@@ -26,7 +27,7 @@ export default () => (
           />
         </Icon>
         <Heading>Flexible, scalable, themeable.</Heading>
-        <Heading as="h3">Spruce React UI Framework</Heading>
+        <Heading as={motion.h3}>Spruce React UI Framework</Heading>
         <Text>
           A fully customisable design system build with functional CSS and
           atomic design principles.

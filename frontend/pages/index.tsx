@@ -7,6 +7,7 @@ import {
   Button,
   Icon,
   Input,
+  IconInput,
   Path
 } from '../components'
 import {
@@ -41,6 +42,17 @@ export default () => (
           atomic design principles.
         </Text>
         <Box as="form">
+          <IconInput
+            before={
+              <Icon width="24px" color="primary" mb={4} viewBox="0 0 180 81">
+                <Path
+                  d={icons.logo}
+                  variants={iconFade}
+                  transition={iconTransition}
+                />
+              </Icon>
+            }
+          />
           <Input placeholder="Email address..." />
         </Box>
         <Box variants={staggerList}>

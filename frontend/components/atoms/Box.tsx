@@ -7,17 +7,24 @@ import {
   color,
   ColorProps,
   typography,
-  TypographyProps
+  TypographyProps,
+  position,
+  PositionProps
 } from 'styled-system'
 import { motion } from 'framer-motion'
 
-type BoxProps = SpaceProps & LayoutProps & ColorProps & TypographyProps
+type BoxProps = SpaceProps &
+  LayoutProps &
+  ColorProps &
+  TypographyProps &
+  PositionProps
 
 export const Box = styled(motion.div)<BoxProps>`
   ${space}
   ${layout}
   ${color}
   ${typography}
+  ${position}
 `
 
 Box.defaultProps = {

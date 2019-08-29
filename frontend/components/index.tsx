@@ -9,3 +9,6 @@ export { Path } from './atoms/Path'
 export { Grid } from './atoms/Grid'
 export { Text } from './atoms/Text'
 export { Heading } from './atoms/Heading'
+
+// MOLECULES
+export { IconInput } from './molecules/IconInput'

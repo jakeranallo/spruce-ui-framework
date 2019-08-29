@@ -14,6 +14,7 @@ type FlexProps = SpaceProps & LayoutProps & ColorProps & FlexboxProps
 
 export const Flex = styled.div<FlexProps>`
   display: flex;
+  position: relative;
   ${space}
   ${layout}
   ${color}

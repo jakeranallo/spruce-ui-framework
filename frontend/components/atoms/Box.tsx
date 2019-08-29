@@ -19,3 +19,8 @@ export const Box = styled(motion.div)<BoxProps>`
   ${color}
   ${typography}
 `
+
+Box.defaultProps = {
+  initial: 'hidden',
+  animate: 'visible'
+}

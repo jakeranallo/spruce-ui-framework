@@ -22,8 +22,6 @@ export default () => (
           <Path
             d={icons.logo}
             variants={iconFade}
-            initial="hidden"
-            animate="visible"
             transition={iconTransition}
           />
         </Icon>
@@ -33,7 +31,7 @@ export default () => (
           A fully customisable design system build with functional CSS and
           atomic design principles.
         </Text>
-        <Box initial="hidden" animate="visible" variants={staggerList}>
+        <Box variants={staggerList}>
           <Button variant="primary" variants={staggerItem}>
             <Text>View on Github</Text>
           </Button>

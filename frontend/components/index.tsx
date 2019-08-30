@@ -5,10 +5,10 @@ export { Flex } from './atoms/Flex'
 export { Icon } from './atoms/Icon'
 export { Image } from './atoms/Image'
 export { Input } from './atoms/Input'
-export { Path } from './atoms/Path'
 export { Grid } from './atoms/Grid'
 export { Text } from './atoms/Text'
 export { Heading } from './atoms/Heading'
 
 // MOLECULES
 export { IconInput } from './molecules/IconInput'
+export { ButtonGroup } from './molecules/ButtonGroup'

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { COMMON, CommonProps } from '../../global'
 export interface IIcon {
-  path: string
+  path?: string
   variants?: any
   transition?: any
   fill?: string
@@ -10,12 +10,13 @@ export interface IIcon {
   animate?: string
   xmlns?: string
   viewBox?: string
+  stroke?: string
 }
 
-const SVG = styled(motion.svg)`
+const SVG = styled(motion.svg)<IIcon>`
   overflow: visible;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: ${props => props.stroke};
   stroke-linejoin: round;
   stroke-linecap: round;
 `
@@ -31,9 +32,10 @@ const IconBase = ({
   animate,
   xmlns,
   viewBox,
+  stroke,
   ...props
 }: IIcon) => (
-  <SVG xmlns={xmlns} viewBox={viewBox} {...props}>
+  <SVG stroke={stroke} xmlns={xmlns} viewBox={viewBox} {...props}>
     <Path
       d={path}
       variants={variants}
@@ -51,7 +53,8 @@ export const Icon = styled(IconBase)<CommonProps>`
 
 SVG.defaultProps = {
   xmlns: 'http://www.w3.org/2000/svg',
-  viewBox: '0 0 100 100'
+  viewBox: '0 0 100 100',
+  stroke: '2px'
 }
 
 Path.defaultProps = {

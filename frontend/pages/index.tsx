@@ -8,7 +8,7 @@ import {
   Icon,
   Input,
   IconInput,
-  Path
+  ButtonGroup
 } from '../components'
 import {
   staggerList,
@@ -61,14 +61,14 @@ export default () => (
           />
           <Input placeholder="Email address..." />
         </Box>
-        <Box variants={staggerList}>
-          <Button variant="primary" variants={staggerItem}>
+        <ButtonGroup variants={staggerList}>
+          <Button m={0} variant="primary" variants={staggerItem}>
             <Text>View on Github</Text>
           </Button>
-          <Button variant="secondary" variants={staggerItem}>
+          <Button m={0} variant="secondary" variants={staggerItem}>
             <Text>Contact Us</Text>
           </Button>
-        </Box>
+        </ButtonGroup>
       </Box>
     </Flex>
   </Page>

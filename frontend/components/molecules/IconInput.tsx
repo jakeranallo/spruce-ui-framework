@@ -1,11 +1,14 @@
 import { Box, Flex, Input } from '..'
 import { IInput } from '../atoms/Input'
+import { COMMON, CommonProps } from '../../global'
+import styled from 'styled-components'
+
 interface IIconInput extends IInput {
   before?: React.ReactNode
   after?: React.ReactNode
 }
 
-export const IconInput = ({ before, after, ...props }: IIconInput) => (
+const IconInputBase = ({ before, after, ...props }: IIconInput) => (
   <Flex width="auto" alignItems="center">
     {before && (
       <Box position="absolute" left="0" pl={2}>
@@ -20,3 +23,7 @@ export const IconInput = ({ before, after, ...props }: IIconInput) => (
     )}
   </Flex>
 )
+
+export const IconInput = styled(IconInputBase)<CommonProps>`
+  ${COMMON}
+`

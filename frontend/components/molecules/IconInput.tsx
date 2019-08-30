@@ -1,26 +1,21 @@
 import { Box, Flex, Input } from '..'
-
-interface IIconInput {
+import { IInput } from '../atoms/Input'
+interface IIconInput extends IInput {
   before?: React.ReactNode
   after?: React.ReactNode
 }
 
-export const IconInput = (props: IIconInput) => (
-  <Flex width="auto" alignItems="center" {...props}>
-    {props.before && (
+export const IconInput = ({ before, after, ...props }: IIconInput) => (
+  <Flex width="auto" alignItems="center">
+    {before && (
       <Box position="absolute" left="0" pl={2}>
-        {props.before}
+        {before}
       </Box>
     )}
-    <Input
-      py={2}
-      pl={props.before ? 4 : 2}
-      pr={props.after ? 4 : 2}
-      {...props}
-    />
-    {props.after && (
+    <Input py={2} pl={before ? 4 : 2} pr={after ? 4 : 2} {...props} />
+    {after && (
       <Box position="absolute" right="0" pr={2}>
-        {props.after}
+        {after}
       </Box>
     )}
   </Flex>

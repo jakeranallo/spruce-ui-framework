@@ -28,13 +28,15 @@ export default () => (
       height="100vh"
     >
       <Box as="main" width={2 / 3} textAlign="center">
-        <Icon width={2 / 4} color="primary" mb={4} viewBox="0 0 180 81">
-          <Path
-            d={icons.logo}
-            variants={iconFade}
-            transition={iconTransition}
-          />
-        </Icon>
+        <Icon
+          path={icons.logo}
+          variants={iconFade}
+          transition={iconTransition}
+          width={2 / 4}
+          color="primary"
+          mb={4}
+          viewBox="0 0 180 81"
+        />
         <Heading>Flexible, scalable, themeable.</Heading>
         <Heading as={motion.h3}>Spruce React UI Framework</Heading>
         <Text>
@@ -46,13 +48,15 @@ export default () => (
             width={1}
             placeholder="text"
             before={
-              <Icon width="24px" color="primary" mb={4} viewBox="0 0 180 81">
-                <Path
-                  d={icons.logo}
-                  variants={iconFade}
-                  transition={iconTransition}
-                />
-              </Icon>
+              <Icon
+                path={icons.logo}
+                variants={iconFade}
+                transition={iconTransition}
+                width={2 / 4}
+                color="primary"
+                mb={4}
+                viewBox="0 0 180 81"
+              />
             }
           />
           <Input placeholder="Email address..." />

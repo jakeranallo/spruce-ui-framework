@@ -1,4 +1,4 @@
-import Page from '../components/Page'
+import Page from '../components/templates/Page'
 
 export default () => (
   <Page title="About">

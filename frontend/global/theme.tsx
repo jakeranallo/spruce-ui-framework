@@ -1,14 +1,70 @@
+import {
+  black,
+  white,
+  gray,
+  blue,
+  green,
+  orange,
+  purple,
+  red,
+  yellow
+} from './colors.json'
+
+const colors = {
+  black,
+  white,
+  gray,
+  blue,
+  green,
+  orange,
+  purple,
+  red,
+  yellow,
+  blackfade15: 'rgba(27, 31, 35, 0.15)',
+  blackfade20: 'rgba(27, 31, 35, 0.20)',
+  blackfade35: 'rgba(27, 31, 35, 0.35)',
+  blackfade50: 'rgba(27, 31, 35, 0.5)',
+  whitefade15: 'rgba(255, 255, 255, 0.15)',
+  state: {
+    error: red[5],
+    failure: red[5],
+    pending: yellow[7],
+    queued: yellow[7],
+    success: green[5],
+    unknown: gray[4]
+  }
+}
+
 export const theme = {
-  colors: {
-    primary: 'red',
-    secondary: 'blue',
-    black: '#000',
-    white: '#fff'
+  colors,
+  breakpoints: ['544px', '768px', '1012px', '1280px'],
+  maxWidths: {
+    small: '544px',
+    medium: '768px',
+    large: '1012px',
+    xlarge: '1280px'
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    primaryFont: 'helvetica',
-    secondaryFont: 'papyrus'
+    normal: fontStack([
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Helvetica',
+      'Arial',
+      'sans-serif',
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol'
+    ]),
+    mono: fontStack([
+      'SFMono-Regular',
+      'Consolas',
+      'Liberation Mono',
+      'Menlo',
+      'Courier',
+      'monospace'
+    ])
   },
   buttonVariants: {
     primary: {
@@ -21,5 +77,16 @@ export const theme = {
       padding: `12px 24px`,
       borderRadius: '50%'
     }
+  },
+  radii: [0, 3, 6],
+  shadows: {
+    small: '0 1px 1px rgba(27, 31, 35, 0.1)',
+    medium: '0 1px 5px rgba(27, 31, 35, 0.15)',
+    large: '0 1px 15px rgba(27, 31, 35, 0.15)',
+    extraLarge: '0 10px 50px rgba(27, 31, 35, 0.07)'
   }
+}
+
+function fontStack(fonts) {
+  return fonts.map(font => (font.includes(' ') ? `"${font}"` : font)).join(', ')
 }

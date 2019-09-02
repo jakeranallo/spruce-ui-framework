@@ -3,8 +3,8 @@ import { css, createGlobalStyle } from 'styled-components'
 
 export const typography = css`
   :root {
-    --font-primary: ${theme.fonts.primaryFont};
-    --font-secondary: ${theme.fonts.secondaryFont};
+    --font-primary: ${theme.fonts.normal};
+    --font-secondary: ${theme.fonts.normal};
 
     /* set base values */
     --text-base-size: 1em;
@@ -27,17 +27,17 @@ export const typography = css`
     --heading-line-height: 1.2;
     --body-line-height: 1.4;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1012px) {
       --text-base-size: 0.98em;
       --text-scale-ratio: 1.35;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       --text-base-size: 0.94em;
       --text-scale-ratio: 1.28;
     }
 
-    @media (max-width: 479px) {
+    @media (max-width: 544px) {
       --text-base-size: 0.9em;
       --text-scale-ratio: 1.2;
     }
@@ -57,6 +57,7 @@ export const typography = css`
   p,
   form legend {
     line-height: var(--heading-line-height);
+    color: ${theme.colors.gray[7]};
   }
 
   /* text size */

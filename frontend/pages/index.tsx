@@ -1,4 +1,4 @@
-import Page from '../components/Page'
+import Page from '../components/templates/Page'
 import {
   Flex,
   Box,
@@ -33,7 +33,7 @@ export default () => (
           variants={iconFade}
           transition={iconTransition}
           width={2 / 4}
-          color="primary"
+          color="blue.5"
           mb={4}
           viewBox="0 0 180 81"
         />
@@ -53,7 +53,7 @@ export default () => (
                 variants={iconFade}
                 transition={iconTransition}
                 width={2 / 4}
-                color="primary"
+                color="blue.1"
                 mb={4}
                 viewBox="0 0 180 81"
               />

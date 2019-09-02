@@ -84,6 +84,16 @@ export const theme = {
     medium: '0 1px 5px rgba(27, 31, 35, 0.15)',
     large: '0 1px 15px rgba(27, 31, 35, 0.15)',
     extraLarge: '0 10px 50px rgba(27, 31, 35, 0.07)'
+  },
+  zIndices: {
+    modal: 6000,
+    overlay: 4000,
+    dropdown: 3000,
+    layerThree: 2500,
+    layerTwo: 2000,
+    layerOne: 1500,
+    foreground: 1000,
+    background: -1000
   }
 }
 

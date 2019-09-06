@@ -25,6 +25,9 @@ const colors = {
   blackfade35: 'rgba(27, 31, 35, 0.35)',
   blackfade50: 'rgba(27, 31, 35, 0.5)',
   whitefade15: 'rgba(255, 255, 255, 0.15)',
+  whitefade20: 'rgba(255, 255, 255, 0.20)',
+  whitefade35: 'rgba(255, 255, 255, 0.35)',
+  whitefade50: 'rgba(255, 255, 255, 0.5)',
   state: {
     error: red[5],
     failure: red[5],
@@ -46,25 +49,12 @@ export const theme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    normal: fontStack([
-      '-apple-system',
-      'BlinkMacSystemFont',
-      'Segoe UI',
-      'Helvetica',
-      'Arial',
-      'sans-serif',
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol'
-    ]),
-    mono: fontStack([
-      'SFMono-Regular',
-      'Consolas',
-      'Liberation Mono',
-      'Menlo',
-      'Courier',
-      'monospace'
-    ])
+    normal:
+      'UntitledSans, apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, arial, sans-serif',
+    medium:
+      'UntitledSans-Medium, apple-system, BlinkMacSystemFont, "Helvetica Neue", helvetica, arial, sans-serif',
+    mono:
+      'OperatorMono-Book, Consolas, "Liberation Mono", Menlo, Courier, monospace'
   },
   buttonVariants: {
     primary: {
@@ -95,8 +85,4 @@ export const theme = {
     foreground: 1000,
     background: -1000
   }
-}
-
-function fontStack(fonts) {
-  return fonts.map(font => (font.includes(' ') ? `"${font}"` : font)).join(', ')
 }

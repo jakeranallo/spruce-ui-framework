@@ -4,7 +4,7 @@ import { css, createGlobalStyle } from 'styled-components'
 export const typography = css`
   :root {
     --font-primary: ${theme.fonts.normal};
-    --font-secondary: ${theme.fonts.normal};
+    --font-secondary: ${theme.fonts.medium};
 
     /* set base values */
     --text-base-size: 1em;

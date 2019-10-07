@@ -3,9 +3,9 @@ import fetch from 'isomorphic-unfetch'
 import { onError } from 'apollo-link-error'
 import { ApolloLink } from 'apollo-link'
 
-let apolloClient = null
+let apolloClient: any = null
 
-function create(initialState) {
+function create(initialState: any) {
   const errorLink = onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
       graphQLErrors.map(({ message, locations, path }) =>
@@ -26,14 +26,14 @@ function create(initialState) {
       new HttpLink({
         uri: 'http://localhost:4000',
         credentials: 'same-origin',
-        fetch: !isBrowser && fetch
+        fetch: !isBrowser ? fetch : undefined
       })
     ]),
     cache: new InMemoryCache().restore(initialState || {})
   })
 }
 
-export default function initApollo(initialState) {
+export default function initApollo(initialState: any) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (typeof window === 'undefined') {

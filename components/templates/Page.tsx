@@ -1,7 +1,13 @@
 import Head from 'next/head'
 import Nav from '../organisms/Nav'
+import { ReactChild } from 'react';
 
-export default ({ children, title = 'This is the default title' }) => (
+interface IPage {
+  children: ReactChild
+  title: string
+}
+
+export default ({ children, title = 'This is the default title' }: IPage) => (
   <div>
     <Head>
       <title>{title}</title>

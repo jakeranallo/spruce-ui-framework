@@ -10,17 +10,13 @@ export interface IApolloProps {
   apolloClient: ApolloClient<NormalizedCacheObject>
 }
 
-export default MyApp => {
+export default (MyApp: any) => {
   return class Apollo extends React.Component<IApolloProps & AppProps> {
     public apolloClient: ApolloClient<NormalizedCacheObject>
     static displayName = 'withApollo(App)'
-    static async getInitialProps(ctx) {
+    static async client(ctx: any) {
       const { Component, router } = ctx
 
-      let appProps = {}
-      if (MyApp.getInitialProps) {
-        appProps = await MyApp.getInitialProps(ctx)
-      }
       // Run all GraphQL queries in the component tree
       // and extract the resulting data
 
@@ -30,8 +26,6 @@ export default MyApp => {
         // Run all GraphQL queries
         await getDataFromTree(
           <MyApp
-            {...appProps}
-            pageProps={{}}
             Component={Component}
             router={router}
             apolloClient={apollo}
@@ -52,7 +46,6 @@ export default MyApp => {
       const apolloState = apollo.cache.extract()
 
       return {
-        ...appProps,
         apolloState
       }
     }

@@ -13,7 +13,7 @@ export const Feed = () => {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  return data.feed.map((title, index) => (
+  return data.feed.map((title: string, index: number) => (
     <div key={index}>
       <p>{title}</p>
     </div>

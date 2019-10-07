@@ -10,9 +10,10 @@ const SIGNUP_MUTATION = gql`
 `
 
 export const Signup = () => {
-  let email
-  let name
-  let password
+  let email: HTMLInputElement | null
+  let name: HTMLInputElement | null
+  let password: HTMLInputElement | null
+  //@ts-ignore
   const [signup, { data }] = useMutation(SIGNUP_MUTATION)
 
   return (
@@ -22,14 +23,14 @@ export const Signup = () => {
           e.preventDefault()
           signup({
             variables: {
-              email: email.value,
-              name: name.value,
-              password: password.value
+              email: email && email.value,
+              name: name && name.value,
+              password: password && password.value
             }
           })
-          email.value = ''
-          name.value = ''
-          password.value = ''
+          email && (email.value = '')
+          name && (name.value = '')
+          password && (password.value = '')
         }}
       >
         <input
